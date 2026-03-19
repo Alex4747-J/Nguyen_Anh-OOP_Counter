@@ -11,10 +11,9 @@
 }
 
 .nav-links {
-  display: flex;
-  list-style: none;
-  gap: 5rem;
-  align-items: center;
+    display: flex;
+    list-style: none;
+    gap: 1rem;
 
   a {
     color: $bg-white;
@@ -24,11 +23,14 @@
     padding: 5px 0;
     text-decoration: none;
     transition: background-color 0.2s ease, color 0.2s ease;
-    &:hover {
-        background-color: $color-red;
-        border-radius: 8px;
-        padding: 10px 15px;
-        color: $color-dark-blue;
+    @include tablet {
+        font-size: 1rem;
+        &:hover {
+            background-color: $color-red;
+            border-radius: 8px;
+            padding: 10px 15px;
+            color: $color-dark-blue;
+            }
         }
     }
 }

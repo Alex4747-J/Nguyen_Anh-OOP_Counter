@@ -18,6 +18,12 @@ $container-width: 1200px;
 $border-radius: 8px;
 
 // ===========================================
+// TRANSITIONS & TIMING
+// ===========================================
+$transition-speed: 0.3s;
+$transition-ease: ease;
+
+// ===========================================
 // TYPOGRAPHY
 // ===========================================
 $font-family-2: 'Poppins', sans-serif;
@@ -28,3 +34,4 @@ $font-family: 'Audiowide', sans-serif;
 // ===========================================
 $breakpoint-mobile: 768px;
 $breakpoint-tablet: 900px;
+$breakpoint-desktop: 1200px;
