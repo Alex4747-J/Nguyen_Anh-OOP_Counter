@@ -1,7 +1,8 @@
 export class Counter {
-    constructor(selector) {
+    constructor(selector, step = 1) {
         this.count = 0;
         this.selector = selector;
+        this.step = step;
         this.mount();
     }
 
@@ -10,24 +11,44 @@ export class Counter {
         const container = document.querySelector(this.selector);
         
         this.display = document.createElement('div');
-        this.button = document.createElement('button');
+        this.incrementBtn = document.createElement('button');
+        this.decrementBtn = document.createElement('button');
+        this.resetBtn = document.createElement('button');
         
         // Set button text
-        this.button.textContent = 'Increment';
+        this.incrementBtn.textContent = 'Increment';
+        this.decrementBtn.textContent = 'Decrement';
+        this.resetBtn.textContent = 'Reset';
         
         // Append display and button to the div
         container.appendChild(this.display);
-        container.appendChild(this.button);
+        container.appendChild(this.incrementBtn);
+        container.appendChild(this.decrementBtn);
+        container.appendChild(this.resetBtn);
         
         // Add event listener to the button
-        this.button.addEventListener('click', () => this.increment());
+        this.incrementBtn.addEventListener('click', () => this.increment());
+        this.decrementBtn.addEventListener('click', () => this.decrement());
+        this.resetBtn.addEventListener('click', () => this.reset());
 
         this.update();
     }
 
     //state methods
     increment() {
-        this.count++;
+        this.count += this.step;
+        this.update();
+    }
+
+    decrement() {
+        if (this.count > 0) {           
+        this.count -= this.step;
+        this.update();
+        }
+    }
+
+    reset() {
+        this.count = 0;
         this.update();
     }
 
@@ -35,14 +56,8 @@ export class Counter {
     update() {
     // Set initial display content
     this.display.textContent = `Count: ${this.count}`;
-
+    this.decrementBtn.disabled = this.count === 0; // Disable decrement button if count is 0
+    this.resetBtn.disabled = this.count === 0; // Disable reset button if count is 0
     
   }
 }
-
-
-// You can't just call increment() directly in addEventListener because it would lose the proper context for this. The event listener needs a function to be executed when the event happens, and that function is where you handle the event and call methods like increment().
-
-// Using an arrow function inside the event listener helps ensure that the this inside increment() points to the Counter instance, not the button.
-
-//It would call the increment() method, but it wouldn’t have the correct context for this
