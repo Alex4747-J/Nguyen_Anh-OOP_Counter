@@ -8,16 +8,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link href="css/grid.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/SplitText.min.js"></script>
     <script type="module" src="js/main.js"></script>
 </head>
 
 <body>
     <header>
         <section class="grid-con navbar">
-<<<<<<< Updated upstream
-            <h1 class="col-span-full">OOP Counter</h1>
-            <nav class="col-span-full m-col-start-8">
-=======
             <div class="ani-container col-span-full">
                 <div class="tube">
                     <p class="line line1">OOP Counter</p>
@@ -27,7 +25,6 @@
                 </div>
                 </div>
             <nav class="col-span-full m-col-start-6 l-col-start-8">
->>>>>>> Stashed changes
                 <h2 class="hidden">Main Navigation</h2>
                 <ul class="nav-links">
                     <li><a href="#overview">Overview</a></li>
@@ -39,30 +36,30 @@
     </header>
     <main>
         <section class="grid-con" id="overview">
-            <h2 class="col-span-full">Overview</h2>
-            <h3 class="col-span-full">What the Counter class does</h3>
-            <p class="col-span-full">The Counter class is a reusable JavaScript component that creates an interactive counter intergace. It automatically generates a display the current count value and three buttons: Increment, Decrement, and Reset. The class manages the counter's state and update the user interface according to the changes, including disabling the Decrement and Reset buttons when the count reaches zero.</p>
-            <h3 class="col-span-full">What problems it solves</h3>
-            <p class="col-span-full">The Counter class solves the problem of creating multiple interactive counter components without duplicating code, instead of manually creating HTNL elements, event listeners, and state management for each counter instance, you can simply instanciate the Counter class with a selector and optional initial value. This approach promotes code reusability and maintainability, and follows object-oriented programming principles.</p>
+            <h2 class="col-span-full highlight-blue">Overview</h2>
+            <h3 class="col-span-full highlight-red">What the Counter class does</h3>
+            <p class="col-span-full split1">The Counter class is a reusable JavaScript component that creates an interactive counter interface. It automatically generates a display showing the current count value along with three buttons: Increment, Decrement, and Reset. The class manages the counter's state and updates the UI accordingly, disabling the Decrement and Reset buttons when the count reaches zero.</p>
+            <h3 class="col-span-full highlight-red">What problems it solves</h3>
+            <p class="col-span-full split1">The Counter class solves the problem of creating multiple interactive counter components without duplicating code, instead of manually creating HTNL elements, event listeners, and state management for each counter instance, you can simply instanciate the Counter class with a selector and optional initial value. This approach promotes code reusability and maintainability, and follows object-oriented programming principles.</p>
         </section>
         <section class="grid-con" id="how-to-use">
-            <h2 class="col-span-full">How to Use</h2>
-            <h3 class="col-span-full">Example HTML container markup:</h3>
+            <h2 class="col-span-full highlight-blue">How to Use</h2>
+            <h3 class="col-span-full highlight-red">Example HTML container markup:</h3>
             <pre class="col-span-full"><code>&lt;div id="counter-container"&gt;&lt;/div&gt;</code></pre>
-            <h3 class="col-span-full">Example instantiation code:</h3>
+            <h3 class="col-span-full highlight-red">Example instantiation code:</h3>
             <pre class="col-span-full"><code>import Counter from './counter.js';</code></pre>
             <pre class="col-span-full"><code>const counter1 = new Counter('#counter-container1', 0);</code></pre>
             <pre class="col-span-full"><code>const counter2 = new Counter('#counter-container2', 4);</code></pre>
-            <h3 class="col-span-full">Example HTML container markup:</h3>
+            <h3 class="col-span-full highlight-red">Example HTML container markup:</h3>
             <ul class=" col-span-full">
-                <li class="col-span-full">selector(required): A CSS selector string that identifies the HTML container element where the counter will be mounted. This SHould match an existing element in your HTML (e.g. '#counter-container 1' or .counter-wrapper')</li>
-                <li class="col-span-full">initialValue(optional): The initial value for the counter. If not provided, it defaults to 0. This parameter allows you to set the starting value for each counter instance.</li>
+                <li class="col-span-full">selector (required): A CSS selector string identifying the HTML container where the counter will be mounted. It must match an existing element in your HTML (e.g. <code>'#counter-container1'</code> or <code>'.counter-wrapper'</code>).</li>
+                <li class="col-span-full">initialValue (optional): The starting value for the counter. Defaults to 0 if not provided.</li>
             </ul>
         </section>
         <section class="grid-con" id="examples">
             <h2 class="col-span-full">Examples</h2>
-            <p class="col-span-full">Here are some examples of how to use the counter:</p>
-            <div class="grid-con">
+            <p class="col-span-full split1">Here are some examples of how to use the counter:</p>
+            <div class="grid-con col-span-full">
                 <div id="counter-container1" class="counter col-span-full m-col-span-6"></div>
                 <div id="counter-container2" class="counter col-span-full m-col-span-6"></div>
                 <div id="counter-container3" class="counter col-span-full m-col-span-6"></div>
