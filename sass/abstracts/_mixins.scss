@@ -15,6 +15,12 @@
   }
 }
 
+@mixin desktop {
+  @media (min-width: $breakpoint-desktop) {
+    @content;
+  }
+}
+
 // ===========================================
 // HOVER EFFECTS
 // ===========================================
@@ -26,3 +32,12 @@
     transform: translateY(-5px);
   }
 }
+
+// ===========================================
+// TRANSITIONS
+// ===========================================
+
+@mixin smooth-transition($properties...) {
+  transition: $properties $transition-speed $transition-ease;
+}
+
