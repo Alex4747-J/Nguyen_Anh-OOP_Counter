@@ -1,0 +1,36 @@
+@use '../abstracts' as *;
+
+.navbar {
+    background-color: $color-blue;
+    color: $bg-white;
+    padding: 20px;
+    text-align: center;
+    font-family: $font-family-2;
+    border-radius: 0 0 8px 8px;
+    margin-bottom: 5rem;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+
+  a {
+    color: $bg-white;
+    font-weight: 500;
+    font-size: 0.95rem;
+    position: relative;
+    padding: 5px 0;
+    text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    @include tablet {
+        font-size: 1rem;
+        &:hover {
+            background-color: $color-red;
+            border-radius: 8px;
+            padding: 10px 15px;
+            color: $color-dark-blue;
+            }
+        }
+    }
+}

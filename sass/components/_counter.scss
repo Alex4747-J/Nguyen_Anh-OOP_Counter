@@ -1,0 +1,35 @@
+@use '../abstracts' as *;
+
+.counter {
+    border: solid 1px #c5c5c5;
+    margin-top: 40px;
+    padding: 20px;
+    box-shadow: 0 0 5px rgba(0,0,0,.2);
+    font-family: $font-family-2;
+      button {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      margin-right: 20px;
+      border: none;
+      border-radius:5px;
+      padding: 10px;
+      background-color: $color-blue;
+      color: #fff;
+      transition: 0.5s;
+       @include hover-lift;
+       @include tablet {
+        padding: 12px 20px;
+        font-size: 1rem;
+      }
+       @include desktop {
+        padding: 15px 25px;
+        font-size: 1.1rem;
+      }
+      &:hover {
+        background-color: $color-red;
+        cursor: pointer;
+      }
+    }
+  }
+  
+  
