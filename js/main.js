@@ -1,6 +1,6 @@
 import { Counter } from './modules/counter.js';
 import { initSplitText } from './modules/splittext.js';
-import { Counter } from './counter.js';
+import { scrollAnimation } from './modules/scroll-ani.js';
 
 const counter1 = new Counter('#counter-container1');
 const counter2 = new Counter('#counter-container2', 4);
